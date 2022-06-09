@@ -11,7 +11,7 @@ from .models import Marketplace, EventDetails, District
 
 class districtview(generics.GenericAPIView):
     serializer_class = DistrictSerializer
-    queryset = Marketplace.objects.all()
+    queryset = District.objects.all()
 
     def get(self, request):
         serializer = DistrictSerializer(self.get_queryset(), many=True)

@@ -13,6 +13,9 @@ class User(AbstractUser):
     is_traveller = models.BooleanField(default=False)
     phone = models.CharField(max_length=10)
 
+    def __str__(self):
+        return self.username
+
 class Seller(models.Model):
     seller = models.OneToOneField(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     shopname = models.CharField(max_length=25)
