@@ -20,7 +20,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-%c#zg9f*)a58dt3f7p##jrurxc+=1jogq%*4^#)=p2sbi7@*=w'
+SECRET_KEY = 'django-insecure-9(g^#&9-jbi3y35kjt)fd7_+a2jz$hb5k061&m)ad$wx(cy#_5'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,11 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'registration',
-    'market',
     'rest_framework',
+    'market',
+    'forum',
+    'registration',
     'knox',
-    'rest_framework.authtoken',
+    'rest_framework.authtoken'
 ]
 
 MIDDLEWARE = [
@@ -103,7 +104,6 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
-
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
