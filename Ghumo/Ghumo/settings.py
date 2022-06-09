@@ -38,7 +38,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'market',
+    'registration',
     'rest_framework',
+    'knox',
+    'rest_framework.authtoken',
 ]
 
 MIDDLEWARE = [
@@ -100,6 +103,16 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'knox.auth.TokenAuthentication',
+        'rest_framework.authentication.BasicAuthentication',
+    ),
+}
+
+AUTH_USER_MODEL = 'registration.User'
 
 
 # Internationalization
