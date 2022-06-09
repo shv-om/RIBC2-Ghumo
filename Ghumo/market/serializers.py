@@ -2,6 +2,13 @@ from rest_framework import serializers
 
 from . import models
 
+
+class DistrictSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = models.District
+        fields = '__all__'
+
+
 class MarketplaceSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Marketplace

@@ -5,7 +5,8 @@ from registration.models import Seller, Artist
 
 class District(models.Model):
     district_name = models.CharField(max_length=50)
-    district_code = models.IntegerField()
+    area_name = models.CharField(max_length=50)
+    area_code = models.IntegerField()
 
     def __str__(self):
         return self.district_name
